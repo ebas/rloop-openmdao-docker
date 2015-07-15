@@ -1,0 +1,13 @@
+diff --git a/src/pycycle/flowstation.py b/src/pycycle/flowstation.py
+index 5a7f9ad..17e5a75 100644
+--- a/src/pycycle/flowstation.py
++++ b/src/pycycle/flowstation.py
+@@ -27,6 +27,8 @@ def secant(func, x0, TOL=1e-7, x_min=1e15, x_max=1e15 ):
+         if abs(dx) < TOL * (1 + abs(x0)): 
+         #if abs((f1-f)/(f+1e-10)) < TOL: 
+             return x0 -dx
++        if f - f1 == 0:
++            return x0 -dx
+         dx = f * (x0 - x1) / float(f - f1)  
+         df = abs((f1-f)/(f+1e-10))      
+ 
