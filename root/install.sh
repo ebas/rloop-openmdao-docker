@@ -38,3 +38,6 @@ cd /root/
 git clone https://github.com/OpenMDAO-Plugins/Hyperloop.git
 cd Hyperloop
 python setup.py develop
+
+echo 'source ~/openmdao-0.10.3.2/bin/activate' >> ~/.bashrc
+echo 'cd Hyperloop/src/hyperloop' >> ~/.bashrc
