@@ -32,6 +32,7 @@ cd /root/
 git clone https://github.com/OpenMDAO-Plugins/pyCycle.git 
 cd pyCycle 
 python setup.py develop 
+git apply /root/divzero.patch
 
 # Hyperloop
 cd /root/
@@ -39,7 +40,9 @@ git clone https://github.com/OpenMDAO-Plugins/Hyperloop.git
 cd Hyperloop
 python setup.py develop
 
+# Startup environment
 echo 'source ~/openmdao-0.10.3.2/bin/activate' >> ~/.bashrc
 echo 'cd Hyperloop/src/hyperloop' >> ~/.bashrc
 
+# Remove cantera source
 rm -rf /root/cantera
