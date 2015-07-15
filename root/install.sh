@@ -41,3 +41,5 @@ python setup.py develop
 
 echo 'source ~/openmdao-0.10.3.2/bin/activate' >> ~/.bashrc
 echo 'cd Hyperloop/src/hyperloop' >> ~/.bashrc
+
+rm -rf /root/cantera
